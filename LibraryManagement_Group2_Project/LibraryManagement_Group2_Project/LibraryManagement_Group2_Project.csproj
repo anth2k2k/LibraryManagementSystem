@@ -1,0 +1,147 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{C2130AAD-67D3-4CDF-8412-1005EC471CDB}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>LibraryManagement_Group2_Project</RootNamespace>
+    <AssemblyName>LibraryManagement_Group2_Project</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DAL\BookDAO.cs" />
+    <Compile Include="DAL\CirculatedCopyDAO.cs" />
+    <Compile Include="DAL\CopyDAO.cs" />
+    <Compile Include="DAL\DAO.cs" />
+    <Compile Include="DAL\MemberDAO.cs" />
+    <Compile Include="DAL\ReservationDAO.cs" />
+    <Compile Include="DTL\Book.cs" />
+    <Compile Include="DTL\CirculatedCopy.cs" />
+    <Compile Include="DTL\Copy.cs" />
+    <Compile Include="DTL\Member.cs" />
+    <Compile Include="DTL\Reservation.cs" />
+    <Compile Include="GUI\BorrowGUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\BorrowGUI.Designer.cs">
+      <DependentUpon>BorrowGUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\MainGUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\MainGUI.Designer.cs">
+      <DependentUpon>MainGUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\RegisterBook.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\RegisterBook.Designer.cs">
+      <DependentUpon>RegisterBook.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\RegisterMember.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\RegisterMember.Designer.cs">
+      <DependentUpon>RegisterMember.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\RenewGUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\RenewGUI.Designer.cs">
+      <DependentUpon>RenewGUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\ReserveGUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\ReserveGUI.Designer.cs">
+      <DependentUpon>ReserveGUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\ReturnGUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\ReturnGUI.Designer.cs">
+      <DependentUpon>ReturnGUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="GUI\BorrowGUI.resx">
+      <DependentUpon>BorrowGUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\MainGUI.resx">
+      <DependentUpon>MainGUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\RegisterBook.resx">
+      <DependentUpon>RegisterBook.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\RegisterMember.resx">
+      <DependentUpon>RegisterMember.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\RenewGUI.resx">
+      <DependentUpon>RenewGUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\ReserveGUI.resx">
+      <DependentUpon>ReserveGUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\ReturnGUI.resx">
+      <DependentUpon>ReturnGUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="App.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="lmao.jpg" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
